@@ -1,0 +1,173 @@
+/* Global Reset & Shell Layout */
+body, html, #root, .app-shell {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  max-width: none !important;
+  background-color: #000000 !important;
+  color: #f3f4f6;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Premium Edge-to-Edge Hero Banner */
+.hero-surface {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  border-radius: 0; /* Ensures no card appearance */
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+/* Dark Readability Overlay */
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+/* Typography sitting directly on image */
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  color: #ffffff;
+}
+
+.hero-copy h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+}
+
+.hero-copy p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+}
+
+.hero-copy .eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #60a5fa; /* Premium blue accent */
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.button-primary {
+  background: #3b82f6;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+/* AI Insights Panel - Integrated for true banner feel */
+.hero-panel {
+  position: relative;
+  z-index: 2;
+  width: 400px;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+.hero-reco-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-reco-row:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Layout for sections below the Hero */
+.page-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure normal background for cards below */
+.light-panel { background: #111827; border: 1px solid #374151; border-radius: 16px; }
+
+/* Immersive Text Containers (No background boxes) */
+.value-card, .cta-banner, .empty-page-panel {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.value-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.cta-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 2rem;
+}
